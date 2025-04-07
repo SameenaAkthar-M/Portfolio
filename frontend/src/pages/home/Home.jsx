@@ -16,6 +16,10 @@ const Home = () => {
 
       tl.from(".main-content h2", { y: -30, opacity: 0, delay: 0.5 })
         .from(".fixed-text", { opacity: 0, y: 40 }, "-=0.5")
+        .from('.resume',{
+          opacity:0,
+          duration:1
+        })
         .from(".change", { opacity: 0, x: 20 }, "-=0.5")
         .from(".my-image", { x: "100%", opacity: 0, scale: 0 }, "-=0.5");
     }, homeRef);
@@ -33,7 +37,7 @@ const Home = () => {
               <span className="fixed-text">Bringing imagination to life through</span>
               <span className="change"></span>
             </p>
-            <button className="resume">Download Resume</button>
+            <button className="resume"><a href="/resume.pdf" download="Sameena-Resume.pdf">Download Resume</a></button>
           </div>
           <div className="image-my">
             <img src={myPhoto} alt="Sameena Akthar" className="my-image" />
